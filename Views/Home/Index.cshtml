@@ -2,7 +2,78 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
+@* <div class="text-center">
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div> *@
+<div class="container text-center">
+    <div class="row">
+        <div class="col-2"></div>
+        <div class='col-8'>
+            <h1 class='display-5'>
+                Hey que tienes para hoy?
+            </h1>
+            <div class="card todo_card border-primary">
+                <div class="card-header">
+                    <form>
+                        <div class="input-group">
+                            <input type="text" class="form-control add-task" placeholder="Nueva tarea...">
+                            <button type="button" class="btn btn-primary" style="">Agregar</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="card-body">
+                    <ul class="list-group list-group-horizontal rounded-0 bg-transparent">
+                        <li class="list-group-item d-flex align-items-center ps-0 pe-3 py-1 rounded-0 border-0 bg-transparent">
+                        <div class="form-check">
+                            <input class="form-check-input me-0" type="checkbox" value="" id="flexCheckChecked1" aria-label="..." checked="">
+                        </div>
+                        </li>
+                        <li class="list-group-item px-3 py-1 d-flex align-items-center flex-grow-1 border-0 bg-transparent">
+                        <p class="lead fw-normal mb-0">Hacer tarea de programacion 2</p>
+                        </li>
+                        <li class="list-group-item ps-3 pe-0 py-1 rounded-0 border-0 bg-transparent">
+                        <div class="d-flex flex-row justify-content-end mb-1">
+                            <a href="#!" class="text-info"  title="" data-mdb-original-title="Edit todo" aria-label="Edit todo"><i class="fas fa-pencil-alt me-3"></i></a>
+                            <a href="#!" class="text-danger"  title="" data-mdb-original-title="Delete todo" aria-label="Delete todo"><i class="fas fa-trash-alt"></i></a>
+                        </div>
+                        <div class="text-end text-muted">
+                            <a href="#!" class="text-muted" data-mdb-toggle="tooltip" title="" data-mdb-original-title="Created date">
+                            <p class="small mb-0"><i class="fas fa-info-circle me-2"></i>28th Jun 2020</p></a>
+                        </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+
+<style>
+    .todo_card{
+        padding: 0px;
+    }
+
+    .todo_card .card-header{
+        background-color: white;
+    }
+
+    .todo_card .card-header .add-task{
+        border:none;
+    }
+
+    
+    .todo_card .card-header .btn{
+        text-transform: uppercase;
+        vertical-align: bottom;
+        border: 0;
+        box-shadow: 0 2px 5px 0 rgb(0 0 0 / 20%), 0 2px 10px 0 rgb(0 0 0 / 10%);
+        font-weight: 500;
+        padding: 0.625rem 1.5rem 0.5rem;
+        font-size: .75rem;
+        line-height: 1.5;
+        border-radius: 25px;
+        border-top-left-radius: 25px !important;
+        border-bottom-left-radius: 25px !important;
+    }
+</style>
